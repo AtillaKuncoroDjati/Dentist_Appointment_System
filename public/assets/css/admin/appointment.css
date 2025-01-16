@@ -1,0 +1,57 @@
+.status {
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+.status-pending {
+    background-color: orange;
+}
+.status-accepted {
+    background-color: green;
+}
+.status-canceled {
+    background-color: red;
+}
+.action-button {
+    transition: opacity 0.3s ease;
+}
+.action-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Added style for filter bar text color */
+#doctor-filter,
+#status-filter,
+#reset-filters-btn {
+    color: black; /* Set text color to black */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
